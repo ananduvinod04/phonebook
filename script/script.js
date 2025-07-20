@@ -6,8 +6,8 @@ data.forEach(element => {
     let contactList=document.getElementById("contactlist")
     let contactListItem=document.createElement("li");
     contactListItem.classList.add("bg-dark","text-white")
-   contactList.setAttribute("data-bs-toggle", "modal");
-contactList.setAttribute("data-bs-target", "#contactDisplayModal");
+  contactListItem.setAttribute("data-bs-toggle", "modal");
+contactListItem.setAttribute("data-bs-target", "#contactDisplayModal");
     let nameDiv =document.createElement("div");
     nameDiv.innerHTML=element.name;
     nameDiv.classList.add("contactName");
