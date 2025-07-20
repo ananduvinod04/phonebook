@@ -1,18 +1,3 @@
 {
-  "contacts": [
-    {
-      "id": "5cee",
-      "name": "ANANDU",
-      "phone": "6235429914",
-      "email": "hotelamruthu@gmail.com",
-      "address": "VYAPARABHAVAN ROAD"
-    },
-    {
-      "id": "60a6",
-      "name": "manu",
-      "phone": "124654",
-      "email": "hotelamruthu@gmail.com",
-      "address": "VYAPARABHAVAN ROAD"
-    }
-  ]
+  "contacts": []
 }
