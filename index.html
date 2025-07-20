@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PhoneBook+</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+</head>
+
+<body class="bg-black">
+  <!-- header pOrtion -->
+  <header>
+    <div>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">phonebook+</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="card text-center bg-dark" style="margin-top: 60px; max-height: 90vh">
+        <div class="card-header text-white bg-dark">
+          <h1>Contacts</h1>
+        </div>
+        <div class="card-body" style="overflow: auto; margin-bottom: 20px">
+          <ul class="list-group" id="contactlist">
+            <li>
+              <div class="list-group-item bg-dark text-white">
+                <h3 data-bs-toggle="modal" data-bs-target="#createContactModal">
+                  + create contact
+                </h3>
+                <!-- modal create contact-->
+                <div class="modal fade" id="createContactModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content bg-dark text-white">
+                      <div class="modal-header border-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          create contact
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" id="newContactForm">
+                          <input type="text" id="NewContactName" placeholder="enter contact name" />
+                          <input type="text" id="NewContactNumber" placeholder="enter contact number" />
+
+                          <input type="email" placeholder="addressline#1" id="NewContactEmail" />
+                          <input type="text" placeholder="address line#2" id="NewContactAddress" /><br />
+                        </form>
+                      </div>
+                      <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                          onclick="clearNewContactField()">
+                          Close
+                        </button>
+                        <button type="button" id="createContactBtn" class="btn btn-primary">
+                          save contact
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- modal showning contactInfo -->
+    <div class="modal fade" id="contactDisplayModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header border-0">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Contact Info
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="contactInfoDisplay">
+            <h3 id="modalContactName"></h3>
+            <h3 id="modalContactPhone"></h3>
+            <h3 id="modalContactEmail"></h3>
+            <h3 id="modalContactAddress"></h3>
+            
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-danger" id="deleteBtn">
+              Delete Contact
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="script/script.js"></script>
+</body>
+
+</html>

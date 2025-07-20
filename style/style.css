@@ -1,0 +1,17 @@
+.contactName,.contactNumber{
+    text-align: left;
+}
+#newContactForm input{
+    border: none;
+    background-color: rgb(59, 58, 58);
+    color: white;
+    margin: 5px;
+    height: 40px;
+    border-radius: 10px;
+width: 80%;
+padding: 0px 5px;
+
+}
+#newContactForm input:focus{
+    outline: none;
+}
